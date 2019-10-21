@@ -7,4 +7,5 @@
 * [开源](开源.md)
     * [v部落](v.md)
     * [bootshiro](bootshiro.md)
+    * [ai](ai.md)
 

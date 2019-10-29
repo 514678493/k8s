@@ -7,4 +7,7 @@
     * [bootshiro](bootshiro.md)
     * [ai](ai.md)
     * [爬虫](爬虫.md)
+* [python](python.md)
+    * [变量](a.md)
+        * 字符串
 

@@ -21,6 +21,6 @@
     * [kube-shell](命令提示.md)
     * [Pod网络组件](pod网络组件.md)
     * [Ingress Controller](ingress-controller.md)
-* [代理](代理.md)
 * [dockers](dockers.md)
+    * [代理](代理.md)
 

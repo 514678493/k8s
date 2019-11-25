@@ -20,6 +20,8 @@ deb https:\/\/mirrors.aliyun.com\/kubernetes\/apt\/ kubernetes-xenial main
 
 EOF
 
+curl -s https:\/\/mirrors.aliyun.com\/kubernetes\/apt\/doc\/apt-key.gpg \| sudo apt-key add -
+
 _apt-get update_
 
 apt-get install -y kubelet kubeadm kubectl

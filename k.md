@@ -24,6 +24,8 @@ _apt-get update_
 
 apt-get install -y kubelet kubeadm kubectl
 
+\#禁止更新
+
 apt-mark hold kubelet kubeadm kubectl
 
 ### 初始化

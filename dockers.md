@@ -18,21 +18,51 @@ software-properties-common
 
 curl -fsSL https:\/\/download.docker.com\/linux\/ubuntu\/gpg \| sudo apt-key add -
 
-
-
 sudo add-apt-repository \
 
- "deb \[arch=amd64\] https:\/\/download.docker.com\/linux\/ubuntu \
+"deb \[arch=amd64\] https:\/\/download.docker.com\/linux\/ubuntu \
 
- $\(lsb\_release -cs\) \
+$\(lsb\_release -cs\) \
 
- stable"
-
-
+stable"
 
 sudo apt-get update
 
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
- sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+### 设置
+
+
+
+cat &gt; \/etc\/docker\/daemon.json &lt;&lt;EOF
+
+{
+
+ "exec-opts": \["native.cgroupdriver=systemd"\],
+
+ "log-driver": "json-file",
+
+ "log-opts": {
+
+ "max-size": "100m"
+
+ },
+
+ "storage-driver": "overlay2"
+
+}
+
+EOF
+
+mkdir -p \/etc\/systemd\/system\/docker.service.d
+
+### 重启
+
+
+
+systemctl daemon-reload
+
+systemctl restart docker
 

@@ -10,9 +10,17 @@ _apt-get update_
 
 _apt-get install kubeadm_
 
+### 初始化
 
+kuadm init 
 
-加入节点
+mkdir -p $HOME\/.kube
+
+ sudo cp -i \/etc\/kubernetes\/admin.conf $HOME\/.kube\/config
+
+ sudo chown $\(id -u\):$\(id -g\) $HOME\/.kube\/config
+
+### 加入节点
 
 kubeadm join 192.168.129.130:6443 --token nc37kv.2fe8qi90utl8kbtf \
 

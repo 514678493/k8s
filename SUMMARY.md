@@ -20,5 +20,5 @@
 * [docker](docker.md)
     * [代理](代理.md)
 * [kubernetes](k.md)
-    * [命令提示](命令提示.md)
+    * [kube-shell](命令提示.md)
 

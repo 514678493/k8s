@@ -1,10 +1,10 @@
 ### hostname
 
-修改 
+修改
 
-hostnamectl set-hostname your-new-host-name
+hostnamectl set-hostname new-host-name
 
- 查看
+查看
 
 hostnamectl status
 

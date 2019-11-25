@@ -52,7 +52,7 @@ kubectl delete node demo-worker-x-x
 
 kubeadm token create --print-join-command
 
-### 重置主节点
+### 重置节点
 
 kubeadm reset
 

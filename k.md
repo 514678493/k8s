@@ -40,9 +40,11 @@ kubeadm join 192.168.129.130:6443 --token nc37kv.2fe8qi90utl8kbtf \
 
 --discovery-token-ca-cert-hash sha256:96db2d839fa15465f619f6b76075e9cae868a6793892d4f4f971a28521ff5820
 
+### **获得 join命令参数**
+
+kubeadm token create --print-join-command
+
 ### 重置节点
 
-kubeadm reset 
-
-
+kubeadm reset
 

@@ -22,7 +22,9 @@ EOF
 
 _apt-get update_
 
-_apt-get install kubeadm_
+apt-get install -y kubelet kubeadm kubectl
+
+apt-mark hold kubelet kubeadm kubectl
 
 ### 初始化
 

@@ -22,5 +22,5 @@
     * [Pod网络组件](pod网络组件.md)
     * [Ingress Controller](ingress-controller.md)
 * [dockers](dockers.md)
-    * [代理](代理.md)
+    * [proxy](proxy.md)
 

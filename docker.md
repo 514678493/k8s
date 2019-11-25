@@ -1,4 +1,4 @@
-| odod\#!\/usr\/bin\/env bash |
+| 123123 |
 | --- |
 |  |
 | function azk8spull\(\) |

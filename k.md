@@ -1,3 +1,17 @@
+### hostname
+
+修改 
+
+hostnamectl set-hostname your-new-host-name
+
+ 查看
+
+hostnamectl status
+
+设置 解析
+
+echo "127.0.0.1 $\(hostname\)" &gt;&gt; \/etc\/hosts
+
 ### 阿里源
 
 cat &lt;&lt;EOF &gt; \/etc\/apt\/sources.list.d\/kubernetes.list
@@ -12,13 +26,13 @@ _apt-get install kubeadm_
 
 ### 初始化
 
-kuadm init 
+kuadm init
 
 mkdir -p $HOME\/.kube
 
- sudo cp -i \/etc\/kubernetes\/admin.conf $HOME\/.kube\/config
+sudo cp -i \/etc\/kubernetes\/admin.conf $HOME\/.kube\/config
 
- sudo chown $\(id -u\):$\(id -g\) $HOME\/.kube\/config
+sudo chown $\(id -u\):$\(id -g\) $HOME\/.kube\/config
 
 ### 加入节点
 

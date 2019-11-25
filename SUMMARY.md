@@ -19,4 +19,6 @@
     * [用户输入](用户输入.md)
 * [docker](docker.md)
     * [代理](代理.md)
+* [kubernetes](k.md)
+    * [命令提示](命令提示.md)
 

@@ -12,6 +12,10 @@ hostnamectl status
 
 echo "127.0.0.1 $\(hostname\)" &gt;&gt; \/etc\/hosts
 
+关闭交换控件
+
+swapoff -a
+
 ### 阿里源
 
 cat &lt;&lt;EOF &gt; \/etc\/apt\/sources.list.d\/kubernetes.list

@@ -36,7 +36,7 @@ apt-mark hold kubelet kubeadm kubectl
 
 ### 初始化
 
-kuadm init
+kuadm init   --pod-network-cidr=10.244.0.0\/16 
 
 mkdir -p $HOME\/.kube
 

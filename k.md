@@ -36,7 +36,7 @@ apt-mark hold kubelet kubeadm kubectl
 
 ### 初始化
 
-kuadm init   --pod-network-cidr=10.244.0.0\/16 
+kuadm init   --pod-network-cidr=10.244.0.0\/16
 
 mkdir -p $HOME\/.kube
 
@@ -65,4 +65,12 @@ kubeadm token create --print-join-command
 ### 重置节点
 
 kubeadm reset
+
+设置开机启动
+
+systemctl enable kubelet
+
+查看images
+
+kubeadm config images list
 

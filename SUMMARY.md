@@ -22,6 +22,7 @@
     * [Pod网络组件](pod网络组件.md)
     * [Ingress Controller](ingress-controller.md)
     * [kubernetes-dashboard](kubernetes-dashboard.md)
+        * [service-account.yaml](service-accountyaml.md)
 * [dockers](dockers.md)
     * [proxy](proxy.md)
 

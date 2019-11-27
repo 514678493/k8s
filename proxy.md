@@ -2,6 +2,8 @@
 
 \#chmod +x dockerpull
 
+.\/dockerpull  images
+
 ### 脚本
 
 \#!\/usr\/bin\/env bash

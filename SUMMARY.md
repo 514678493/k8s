@@ -16,6 +16,8 @@
     * [Ingress Controller](ingress-controller.md)
     * [kubernetes-dashboard](kubernetes-dashboard.md)
         * [service-account.yaml](service-accountyaml.md)
+    * [example](kubectl.md)
+        * [kubectl deployment](kubectl-deployment.md)
 * [dockers](dockers.md)
     * [proxy](proxy.md)
 

@@ -20,7 +20,7 @@ namespace: kubernetes-dashboard
 
 spec:
 
-type: NodePort \# 改成NodePort
+type: NodePort      \# 改成NodePort
 
 ports:
 
@@ -28,7 +28,7 @@ ports:
 
   targetPort: 8443
 
-  nodePort: 31001 \# 指定nodePort端口
+  nodePort: 31001   \# 指定nodePort端口
 
   selector:
 

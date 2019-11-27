@@ -43,3 +43,103 @@ kubectl apply -f   recommended.yaml
 
 kubectl -n kube-system describe secret $\(kubectl -n kubernetes-dashboard get secret \| grep admin-user \| awk '{print $1}'\)
 
+访问
+
+https:\/\/masterIp: nodePort 
+
+### 创建完整权限用户
+
+apiVersion: v1
+
+kind: ServiceAccount
+
+metadata:
+
+ name: aks-dashboard-admin
+
+ namespace: kube-system
+
+---
+
+apiVersion: rbac.authorization.k8s.io\/v1
+
+kind: ClusterRoleBinding
+
+metadata:
+
+ name: aks-dashboard-admin
+
+roleRef:
+
+ apiGroup: rbac.authorization.k8s.io
+
+ kind: ClusterRole
+
+ name: cluster-admin
+
+subjects:
+
+- kind: ServiceAccount
+
+ name: aks-dashboard-admin
+
+ namespace: kube-system
+
+......
+
+apiVersion: rbac.authorization.k8s.io\/v1beta1
+
+kind: ClusterRoleBinding
+
+metadata:
+
+ name: kubernetes-dashboard
+
+ labels:
+
+ k8s-app: kubernetes-dashboard
+
+roleRef:
+
+ apiGroup: rbac.authorization.k8s.io
+
+ kind: ClusterRole
+
+ name: cluster-admin
+
+subjects:
+
+- kind: ServiceAccount
+
+ name: kubernetes-dashboard
+
+ namespace: kube-system
+
+apiVersion: rbac.authorization.k8s.io\/v1beta1
+
+kind: ClusterRoleBinding
+
+metadata:
+
+ name: kubernetes-dashboard-head
+
+ labels:
+
+ k8s-app: kubernetes-dashboard-head
+
+roleRef:
+
+ apiGroup: rbac.authorization.k8s.io
+
+ kind: ClusterRole
+
+ name: cluster-admin
+
+subjects:
+
+- kind: ServiceAccount
+
+ name: kubernetes-dashboard-head
+
+ namespace: kube-system
+

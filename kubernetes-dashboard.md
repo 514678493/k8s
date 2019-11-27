@@ -41,7 +41,7 @@ kubectl apply -f   recommended.yaml
 
 ### 获取token
 
-kubectl -n kube-system describe secret $\(kubectl -n kube-system get secret \| grep admin-user \| awk '{print $1}'\)
+kubectl -n kube-system describe secret $\(kubectl -n kube-system get secret \| grep aks-dashboard-admin \| awk '{print $1}'\)
 
 访问
 

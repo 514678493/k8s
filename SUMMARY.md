@@ -11,6 +11,7 @@
     * [字典](字典.md)
     * [用户输入](用户输入.md)
     * [函数](函数.md)
+    * [类](类.md)
 * [kubernetes](k.md)
     * [kube-shell](命令提示.md)
     * [Pod网络组件](pod网络组件.md)

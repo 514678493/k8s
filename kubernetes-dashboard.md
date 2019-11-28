@@ -49,19 +49,19 @@ https:\/\/masterIp: nodePort
 
 ### 创建完整权限用户
 
+---
+
 apiVersion: v1
 
 kind: ServiceAccount
 
 metadata:
 
-name: aks-dashboard-admin
+ name: aks-dashboard-admin
 
-namespace: kube-system
+ namespace: kube-system
 
-
-
-------
+---
 
 apiVersion: rbac.authorization.k8s.io\/v1
 
@@ -69,24 +69,23 @@ kind: ClusterRoleBinding
 
 metadata:
 
-name: aks-dashboard-admin
+ name: aks-dashboard-admin
 
 roleRef:
 
-apiGroup: rbac.authorization.k8s.io
+ apiGroup: rbac.authorization.k8s.io
 
-kind: ClusterRole
+ kind: ClusterRole
 
-name: cluster-admin
+ name: cluster-admin
 
 subjects:
 
-* kind: ServiceAccount
+- kind: ServiceAccount
 
-  name: aks-dashboard-admin
+ name: aks-dashboard-admin
 
-  namespace: kube-system
-
+ namespace: kube-system
 
 ......
 
@@ -96,28 +95,27 @@ kind: ClusterRoleBinding
 
 metadata:
 
-name: kubernetes-dashboard
+ name: kubernetes-dashboard
 
-labels:
+ labels:
 
-k8s-app: kubernetes-dashboard
+ k8s-app: kubernetes-dashboard
 
 roleRef:
 
-apiGroup: rbac.authorization.k8s.io
+ apiGroup: rbac.authorization.k8s.io
 
-kind: ClusterRole
+ kind: ClusterRole
 
-name: cluster-admin
+ name: cluster-admin
 
 subjects:
 
-* kind: ServiceAccount
+- kind: ServiceAccount
 
-  name: kubernetes-dashboard
+ name: kubernetes-dashboard
 
-  namespace: kube-system
-
+ namespace: kube-system
 
 apiVersion: rbac.authorization.k8s.io\/v1beta1
 
@@ -125,26 +123,25 @@ kind: ClusterRoleBinding
 
 metadata:
 
-name: kubernetes-dashboard-head
+ name: kubernetes-dashboard-head
 
-labels:
+ labels:
 
-k8s-app: kubernetes-dashboard-head
+ k8s-app: kubernetes-dashboard-head
 
 roleRef:
 
-apiGroup: rbac.authorization.k8s.io
+ apiGroup: rbac.authorization.k8s.io
 
-kind: ClusterRole
+ kind: ClusterRole
 
-name: cluster-admin
+ name: cluster-admin
 
 subjects:
 
-* kind: ServiceAccount
+- kind: ServiceAccount
 
-  name: kubernetes-dashboard-head
+ name: kubernetes-dashboard-head
 
-  namespace: kube-system
-
+ namespace: kube-system
 

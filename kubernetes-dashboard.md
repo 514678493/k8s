@@ -61,7 +61,7 @@ namespace: kube-system
 
 
 
----
+------
 
 apiVersion: rbac.authorization.k8s.io\/v1
 

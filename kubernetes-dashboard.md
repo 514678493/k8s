@@ -45,9 +45,7 @@ kubectl -n kube-system describe secret $\(kubectl -n kube-system get secret \| g
 
 ### 访问
 
-https:\/\/masterIp: nodePort
+https:\/\/masterIp: nodePort（谷歌浏览器不能访问）
 
 ### 创建完整权限用户
-
-
 
